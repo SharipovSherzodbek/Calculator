@@ -1,12 +1,44 @@
 ﻿using System;
 
-Console.WriteLine("Welcome to Calculator programm!");
-Console.WriteLine("Enter first numbers...");
-int a = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine("Enter second Number");
-int b = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"First number is greater  {a > b}");
-System.Console.WriteLine($"First number is less than second {a < b}");
-System.Console.WriteLine($"Numbers are equal {a == b}");
-System.Console.WriteLine($"There are differnt numbers {a != b}");
-System.Console.WriteLine($"first number greater or equal {a >= b}");
+ Console.WriteLine("Welcome to Calculator programm!");
+ Console.WriteLine(" Enter the first number...");
+int firstValue;
+    if (int.TryParse(Console.ReadLine(), out firstValue))
+    {
+    }
+    else
+    {
+        Console.WriteLine("Invalid format! Please enter a valid integer.");
+        return;
+    }
+
+Console.WriteLine("Enter second Number");
+int secondValue;
+    if (int.TryParse(Console.ReadLine(), out secondValue))
+    {
+    }
+    else
+    {
+        Console.WriteLine("Invalid format! Please enter a valid integer.");
+        return;
+    }
+
+if (firstValue > secondValue)
+    {
+        Console.WriteLine("First Number is greater !");
+    }
+else if (firstValue == secondValue)
+    {
+        Console.WriteLine("Numbers are equal !");
+    }
+else
+    {
+        Console.WriteLine("Second Number is greater !");
+    }
+
+string message =
+    firstValue > 0
+    ? "First Value is positive !"
+    : "First Value is negative";
+Console.WriteLine(message);
+
