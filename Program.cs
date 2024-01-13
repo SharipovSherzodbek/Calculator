@@ -49,9 +49,46 @@ string messag =
     : "First and second Numbers are negative";
 Console.WriteLine(messag);
 
-string messa =
-    !(firstValue >= 0)
-    ? "First Number is Negative !"
-    : "First Number is Positive";
-Console.WriteLine(messa);
+// string messa =
+//     !(firstValue >= 0)
+//     ? "First Number is not Positive !"
+//     : "First Number is not Negative !";
+// Console.WriteLine(messa);
+
+
+//switch
+
+Console.WriteLine("To use Calculator enter operation (+,-,*,/,%): ");
+string operation = Console.ReadLine();
+switch(operation)
+{
+    case "+":
+        Console.WriteLine($"Adding {firstValue} + {secondValue} = {firstValue + secondValue}");
+        break;
+    case "-":
+        Console.WriteLine($"Minus {firstValue} - {secondValue} = {firstValue - secondValue}");
+        break;
+    case "/":
+        Console.Write($"Dividing {firstValue} / {secondValue} = {firstValue / secondValue} ");
+        Console.WriteLine($"Residue is {firstValue % secondValue} ");
+        break; 
+    case "*":
+        Console.WriteLine($"Multiplying {firstValue} * {secondValue} = {firstValue * secondValue}");
+        break;   
+
+    default:
+        Console.WriteLine("Operation Not Found!");   
+        break;
+}
+
+// switch expression
+string result = operation switch
+{
+    "+" => $"Adding {firstValue} + {secondValue} = {firstValue + secondValue}",
+    "/" => $"Dividing {firstValue} / {secondValue} = {firstValue / secondValue} Residue is {firstValue % secondValue}",
+    "-" => $"Minus {firstValue} - {secondValue} = {firstValue - secondValue}",
+    "*" => $"Multipliying {firstValue} * {secondValue} = {firstValue * secondValue}",
+    _   => "Operation Not Found!"
+};
+System.Console.WriteLine(result);
 
