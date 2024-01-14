@@ -1,5 +1,13 @@
 ﻿using System;
 
+string parol = "";
+do
+{
+System.Console.WriteLine("Enter password to Run \"123\" ");
+parol = Console.ReadLine();
+}
+while (parol != "123");
+
 Console.WriteLine("Welcome to Calculator programm!");
 Console.WriteLine(" Enter the first number...");
 int firstValue;
@@ -55,7 +63,6 @@ Console.WriteLine(messag);
 //     : "First Number is not Negative !";
 // Console.WriteLine(messa);
 
-
 //switch
 
 Console.WriteLine("To use Calculator enter operation (+,-,*,/,%): ");
@@ -91,4 +98,24 @@ string result = operation switch
     _   => "Operation Not Found!"
 };
 System.Console.WriteLine(result);
+System.Console.Read();
+
+//if (firstValue>0)
+//{
+    int counter = 0;
+    while (counter < firstValue)
+    {
+    System.Console.WriteLine(counter);
+    counter++;
+    }
+    
+//}
+
+int sonlar = 2;
+while (sonlar <= 100)
+{
+    System.Console.WriteLine(sonlar);
+    sonlar = sonlar +2 ;
+}
+
 
