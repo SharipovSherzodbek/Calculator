@@ -118,4 +118,12 @@ while (sonlar <= 100)
     sonlar = sonlar +2 ;
 }
 
+//    FOR LOOP
+for ( int it = 1; it <= 10; it++)
+{
+    for(int iterat = 1; iterat <= 10; iterat++)
+    {
+        System.Console.WriteLine($"{it} x {iterat} = {it*iterat}");
+    }
+}
 
